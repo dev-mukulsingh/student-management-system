@@ -1,0 +1,12 @@
+/home/mukul/Downloads/New Folder/student-management-system/src/main/java/com/college/studentmanagement/StudentManagementSystemApplication.java
+/home/mukul/Downloads/New Folder/student-management-system/src/main/java/com/college/studentmanagement/controller/HomeController.java
+/home/mukul/Downloads/New Folder/student-management-system/src/main/java/com/college/studentmanagement/controller/MarksController.java
+/home/mukul/Downloads/New Folder/student-management-system/src/main/java/com/college/studentmanagement/controller/StudentController.java
+/home/mukul/Downloads/New Folder/student-management-system/src/main/java/com/college/studentmanagement/model/Marks.java
+/home/mukul/Downloads/New Folder/student-management-system/src/main/java/com/college/studentmanagement/model/ReportSummary.java
+/home/mukul/Downloads/New Folder/student-management-system/src/main/java/com/college/studentmanagement/model/Student.java
+/home/mukul/Downloads/New Folder/student-management-system/src/main/java/com/college/studentmanagement/repository/MarksRepository.java
+/home/mukul/Downloads/New Folder/student-management-system/src/main/java/com/college/studentmanagement/repository/StudentRepository.java
+/home/mukul/Downloads/New Folder/student-management-system/src/main/java/com/college/studentmanagement/service/MarksService.java
+/home/mukul/Downloads/New Folder/student-management-system/src/main/java/com/college/studentmanagement/service/StudentService.java
+/home/mukul/Downloads/New Folder/student-management-system/src/main/java/com/college/studentmanagement/util/GradeCalculator.java

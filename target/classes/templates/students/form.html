@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Student Form</title>
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+</head>
+<body>
+
+<div class="container">
+
+    <h1 th:text="${student.id} != null ? 'Edit Student' : 'Add Student'"></h1>
+
+    <form th:action="@{/students/save}" th:object="${student}" method="post" class="form">
+
+        <input type="hidden" th:field="*{id}">
+
+        <label>Roll Number</label>
+        <input type="text" th:field="*{rollNumber}">
+        <p class="error" th:if="${#fields.hasErrors('rollNumber')}" th:errors="*{rollNumber}"></p>
+
+        <label>Name</label>
+        <input type="text" th:field="*{name}">
+        <p class="error" th:if="${#fields.hasErrors('name')}" th:errors="*{name}"></p>
+
+        <label>Email</label>
+        <input type="text" th:field="*{email}">
+        <p class="error" th:if="${#fields.hasErrors('email')}" th:errors="*{email}"></p>
+
+        <label>Phone</label>
+        <input type="text" th:field="*{phone}">
+
+        <label>Department</label>
+        <input type="text" th:field="*{department}">
+
+        <div class="form-actions">
+            <button type="submit">Save</button>
+            <a th:href="@{/students}" class="btn-secondary">Cancel</a>
+        </div>
+
+    </form>
+
+</div>
+
+</body>
+</html>

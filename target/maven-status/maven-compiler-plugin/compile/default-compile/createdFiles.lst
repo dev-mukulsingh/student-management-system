@@ -1,0 +1,12 @@
+com/college/studentmanagement/repository/MarksRepository.class
+com/college/studentmanagement/model/Student.class
+com/college/studentmanagement/StudentManagementSystemApplication.class
+com/college/studentmanagement/controller/MarksController.class
+com/college/studentmanagement/model/ReportSummary.class
+com/college/studentmanagement/repository/StudentRepository.class
+com/college/studentmanagement/service/MarksService.class
+com/college/studentmanagement/service/StudentService.class
+com/college/studentmanagement/controller/StudentController.class
+com/college/studentmanagement/util/GradeCalculator.class
+com/college/studentmanagement/controller/HomeController.class
+com/college/studentmanagement/model/Marks.class

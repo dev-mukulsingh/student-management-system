@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Student Details</title>
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+</head>
+<body>
+
+<div class="container">
+
+    <a th:href="@{/students}" class="back-link">&laquo; Back to list</a>
+
+    <div th:if="${message}" class="alert" th:text="${message}"></div>
+
+    <h1 th:text="${student.name}"></h1>
+
+    <table class="details-table">
+        <tr>
+            <td>Roll Number</td>
+            <td th:text="${student.rollNumber}"></td>
+        </tr>
+        <tr>
+            <td>Email</td>
+            <td th:text="${student.email}"></td>
+        </tr>
+        <tr>
+            <td>Phone</td>
+            <td th:text="${student.phone}"></td>
+        </tr>
+        <tr>
+            <td>Department</td>
+            <td th:text="${student.department}"></td>
+        </tr>
+    </table>
+
+    <h2>Marks</h2>
+
+    <div class="top-actions">
+        <a th:href="@{/students/{id}/marks/new(id=${student.id})}" class="btn">Add Marks</a>
+    </div>
+
+    <table class="data-table">
+        <thead>
+        <tr>
+            <th>Subject</th>
+            <th>Marks Obtained</th>
+            <th>Maximum Marks</th>
+            <th>Actions</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="m : ${marksList}">
+            <td th:text="${m.subjectName}"></td>
+            <td th:text="${m.marksObtained}"></td>
+            <td th:text="${m.maxMarks}"></td>
+            <td class="actions">
+                <a th:href="@{/students/{sid}/marks/edit/{mid}(sid=${student.id},mid=${m.id})}">Edit</a>
+                <a th:href="@{/students/{sid}/marks/delete/{mid}(sid=${student.id},mid=${m.id})}"
+                   onclick="return confirm('Delete this marks record?')">Delete</a>
+            </td>
+        </tr>
+        <tr th:if="${#lists.isEmpty(marksList)}">
+            <td colspan="4" class="empty-row">No marks entered yet.</td>
+        </tr>
+        </tbody>
+    </table>
+
+    <h2>Report Summary</h2>
+
+    <table class="details-table">
+        <tr>
+            <td>Total Marks Obtained</td>
+            <td th:text="${report.totalObtained}"></td>
+        </tr>
+        <tr>
+            <td>Total Maximum Marks</td>
+            <td th:text="${report.totalMax}"></td>
+        </tr>
+        <tr>
+            <td>Percentage</td>
+            <td th:text="${#numbers.formatDecimal(report.percentage, 1, 2)} + '%'"></td>
+        </tr>
+        <tr>
+            <td>Grade</td>
+            <td th:text="${report.grade}"></td>
+        </tr>
+    </table>
+
+</div>
+
+</body>
+</html>
